@@ -179,7 +179,7 @@ class ScopedModel<T extends Model> extends StatelessWidget {
         : context.ancestorInheritedElementForWidgetOfExactType(type)?.widget;
 
     if (widget == null) {
-      throw ScopedModelError();
+      return null;
     } else {
       return (widget as _InheritedModel<T>).model;
     }
